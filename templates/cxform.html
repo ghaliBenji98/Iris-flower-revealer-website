@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">	
+	<title>Machine Learning API</title>
+	<style>
+        body {
+		 background-image: url('{% static "images/flower.jpg"%}'); 
+		 background-size: cover;
+		 margin: 30px;
+			}
+		
+		h1 {
+			font-style: italic;
+			font-family: 'Times New Roman', Times, serif;
+			background-color: #848E66;
+			color: darkred;
+			background-size:100%;
+			padding:10px;
+			text-align: center;		
+		}
+
+		form {
+			display: block;
+			width: 50%;
+			margin: auto;
+			border: 1px solid rgb(167, 222, 236);
+			border-radius: 20px;
+			padding: 20px 40px 40px 40px;  
+			font-family: Arial, Helvetica, sans-serif;
+			color:rgb(31, 0, 104);
+
+		}
+		button {
+			display: inline-block;
+			float: left;
+			width: 20%;
+			margin: 20px;
+		}
+		ul {
+			display: inline-block;
+			margin-left: 20px;
+			font-style:oblique;
+			font-family: 'Times New Roman', Times, serif;
+			color: rgb(55, 0, 80);
+			font-size:xx-large;
+		}
+    </style>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+	
+</head>
+
+<body>
+{% load crispy_forms_tags %}
+	<h1>Flower Revealer</h1><br>
+		<form method='post'>	
+			{% csrf_token %}
+			{{form|crispy}}<br>
+			<button type='submit' class="btn btn-primary">Submit</button>
+			<h4>
+				{% if messages %}
+				<ul class="messages">
+				{% for message in messages %}
+				<div  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> 
+				{{ message }} </div>
+				{% endfor %}
+				</ul>
+				{% endif %}
+				</h4>
+		</form>	
+</body>
+</html>
