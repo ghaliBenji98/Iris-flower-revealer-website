@@ -1,7 +1,7 @@
 # Flower-Revealer
 <h2>You can find the final website in the following link : <a href ="http://flowerrevealer.pythonanywhere.com/">flowerrevealer</a></h2>
 
-<h3>We have applied a neural network model on the famous <a href = 'https://raw.githubusercontent.com/ghaliBenji98/Flower-Revealer/master/iris.data'>Iris data set</a></h3>
+<h3>We have applied a neural network model on the famous <a href = 'https://github.com/ghaliBenji98/Iris-flower-revealer-website/blob/main/iris.data'>Iris data set</a></h3>
 
 <img src= "https://github.com/ghaliBenji98/Flower-Revealer/blob/main/Capture.JPG" alt="" height="x2">
 
